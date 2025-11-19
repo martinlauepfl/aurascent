@@ -1,0 +1,115 @@
+'use client';
+
+import React, { useState } from 'react';
+import { Gender, UserProfile } from '../types';
+
+interface FormProps {
+  onSubmit: (data: UserProfile) => void;
+  isLoading: boolean;
+}
+
+export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
+  const [name, setName] = useState('');
+  const [birthDate, setBirthDate] = useState('');
+  const [birthTime, setBirthTime] = useState('');
+  const [gender, setGender] = useState<Gender>(Gender.Female);
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onSubmit({ name, birthDate, birthTime, gender });
+  };
+
+  return (
+    <div className="w-full max-w-md mx-auto p-8 glass-panel rounded-2xl shadow-2xl border-t border-white/10 animate-fade-in">
+      <h2 className="text-3xl text-center mb-2 text-transparent bg-clip-text bg-gradient-to-r from-rose-400 to-pink-400 font-display">
+        揭示您的香气密码
+      </h2>
+      <p className="text-center text-rose-600 mb-8 text-sm">
+        输入您的出生信息来咨询AI神谕。
+      </p>
+
+      <form onSubmit={handleSubmit} className="space-y-6">
+        {/* Name */}
+        <div className="space-y-2">
+          <label className="block text-xs uppercase tracking-widest text-rose-500 font-bold">姓名（选填）</label>
+          <input
+            type="text"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            className="w-full bg-white/60 border border-rose-200 rounded-lg px-4 py-3 text-rose-900 focus:ring-2 focus:ring-pink-400 focus:border-transparent outline-none transition-all [color-scheme:light] placeholder-rose-400"
+            placeholder="您的姓名"
+          />
+        </div>
+
+        {/* Birth Date */}
+        <div className="space-y-2">
+          <label className="block text-xs uppercase tracking-widest text-rose-500 font-bold">出生日期</label>
+          <input
+            type="date"
+            required
+            value={birthDate}
+            onChange={(e) => setBirthDate(e.target.value)}
+            className="w-full bg-white/60 border border-rose-200 rounded-lg px-4 py-3 text-rose-900 focus:ring-2 focus:ring-pink-400 outline-none transition-all [color-scheme:light] placeholder-rose-400 [&::-webkit-calendar-picker-indicator]:cursor-pointer [&::-webkit-calendar-picker-indicator]:filter [&::-webkit-calendar-picker-indicator]:hover:opacity-70"
+            placeholder="请选择日期"
+          />
+        </div>
+
+        {/* Birth Time */}
+        <div className="space-y-2">
+          <label className="block text-xs uppercase tracking-widest text-rose-500 font-bold">出生时间（选填）</label>
+          <input
+            type="time"
+            value={birthTime}
+            onChange={(e) => setBirthTime(e.target.value)}
+            className="w-full bg-white/60 border border-rose-200 rounded-lg px-4 py-3 text-rose-900 focus:ring-2 focus:ring-pink-400 outline-none transition-all [color-scheme:light] placeholder-rose-400"
+            placeholder="请选择时间"
+          />
+        </div>
+
+        {/* Gender */}
+        <div className="space-y-2">
+          <label className="block text-xs uppercase tracking-widest text-rose-500 font-bold">性别</label>
+          <div className="grid grid-cols-2 gap-3">
+            {Object.values(Gender).map((g) => (
+              <button
+                key={g}
+                type="button"
+                onClick={() => setGender(g)}
+                className={`py-2 px-4 rounded-lg text-sm font-medium transition-all border ${
+                  gender === g
+                    ? 'bg-rose-400 border-pink-300 text-white shadow-[0_0_15px_rgba(244,114,182,0.5)]'
+                    : 'bg-white/40 border-rose-200 text-rose-600 hover:bg-white/60'
+                }`}
+              >
+                {g}
+              </button>
+            ))}
+          </div>
+        </div>
+
+        <button
+          type="submit"
+          disabled={isLoading}
+          className={`w-full mt-6 py-4 rounded-lg font-display text-lg font-semibold tracking-wider text-white transition-all relative overflow-hidden group ${
+            isLoading ? 'opacity-70 cursor-not-allowed' : 'hover:shadow-[0_0_25px_rgba(244,114,182,0.6)]'
+          }`}
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-rose-400 via-pink-400 to-rose-400 transition-transform duration-1000 group-hover:scale-110"></div>
+          <span className="relative z-10 flex items-center justify-center gap-2">
+            {isLoading ? (
+              <>
+                <svg className="animate-spin h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                  <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
+                  <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+                </svg>
+                占卜中...
+              </>
+            ) : (
+              '咨询神谕'
+            )}
+          </span>
+        </button>
+      </form>
+    </div>
+  );
+};
