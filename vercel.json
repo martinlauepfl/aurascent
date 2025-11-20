@@ -12,7 +12,6 @@
         }
       ],
       "destination": "https://aurascent.top/:path*",
-      "permanent": true,
       "statusCode": 308
     }
   ],
