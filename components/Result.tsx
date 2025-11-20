@@ -10,256 +10,351 @@ interface ResultProps {
 
 export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
   return (
-    <div className="w-full max-w-5xl mx-auto animate-fade-in px-4">
-      <div className="mb-8 text-center">
-        <div className="inline-block">
-          <h2 className="text-2xl md:text-3xl font-display bg-gradient-to-r from-rose-600 to-pink-600 bg-clip-text text-transparent font-bold mb-2">
-            您的命运密码
+    <div className="w-full max-w-7xl mx-auto animate-fade-in px-4">
+      {/* 顶部标题 */}
+      <div className="mb-12 text-center">
+        <div className="inline-block relative">
+          <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 opacity-20" />
+          <h2 className="relative text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold animate-text-shine
+            drop-shadow-[0_0_20px_rgba(255,215,0,0.3)] mb-3">
+            命运密码已解
           </h2>
-          <div className="w-24 h-1 bg-gradient-to-r from-rose-400 to-pink-400 rounded-full mx-auto"></div>
+          <div className="h-1 w-32 bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-full mx-auto mb-2" />
+          <p className="text-purple-200/70 text-sm tracking-widest uppercase">Your Destiny Revealed</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 xl:grid-cols-3 gap-6 lg:gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
 
-        {/* Left Column: Personal Analysis */}
-        <div className="xl:col-span-1 space-y-6">
-          {/* Personal Essence */}
-          <div className="glass-panel p-6 rounded-2xl border-t border-pink-300/30 relative overflow-hidden group">
-            <div className="absolute top-0 right-0 w-20 h-20 bg-gradient-to-br from-rose-200/20 to-pink-200/20 rounded-full blur-xl"></div>
-
-            <div className="text-center mb-6 relative z-10">
-              <span className="inline-block px-4 py-2 text-xs font-bold tracking-widest text-rose-600 uppercase border border-pink-300/50 rounded-full bg-gradient-to-r from-pink-100/60 to-rose-100/60 mb-4 shadow-sm">
-                灵魂本质
-              </span>
-              <h3 className="text-3xl text-rose-900 font-display mb-2">{data.element}</h3>
-              <p className="text-pink-600 text-sm font-serif italic">{data.archetype}</p>
-            </div>
-
-            <div className="bg-white/30 rounded-xl p-4 mb-6 relative z-10">
-              <div className="space-y-3 text-rose-700 text-sm leading-relaxed">
-                <p>{data.personalityAnalysis}</p>
-              </div>
-            </div>
-
-            <div className="grid grid-cols-2 gap-4 relative z-10">
-               <div className="text-center">
-                 <span className="text-xs uppercase text-rose-600 font-bold tracking-wider block mb-1">幸运颜色</span>
-                 <div className="flex items-center justify-center gap-2">
-                   <div
-                      className="w-6 h-6 rounded-full border-2 border-white/50 shadow-lg"
-                      style={{ backgroundColor: data.luckyColor.toLowerCase().includes('金') ? '#FFD700' : data.luckyColor.includes('红') ? '#FF6B6B' : data.luckyColor.includes('蓝') ? '#4ECDC4' : data.luckyColor.includes('绿') ? '#95E77E' : '#FFB6C1' }}
-                   />
-                 </div>
-                 <span className="text-xs text-rose-800 mt-1 block">{data.luckyColor}</span>
-               </div>
-               <div className="text-center">
-                 <span className="text-xs uppercase text-rose-600 font-bold tracking-wider block mb-1">幸运数字</span>
-                 <div className="text-2xl text-rose-800 font-display font-bold">{data.fortune.luckyNumber}</div>
-               </div>
-            </div>
-          </div>
-
-          {/* Fortune Compass */}
-          <div className="glass-panel p-6 rounded-2xl border-t border-rose-300/30">
+        {/* 左侧栏 - 个人分析 */}
+        <div className="lg:col-span-5 space-y-6">
+          {/* 灵魂本质卡片 */}
+          <div className="glass-panel p-8 rounded-3xl border-gold mystical-glow hover-lift">
             <div className="text-center mb-6">
-              <span className="inline-block px-4 py-2 text-xs font-bold tracking-widest text-rose-600 uppercase border border-pink-300/50 rounded-full bg-gradient-to-r from-pink-100/60 to-rose-100/60 shadow-sm">
-                运势罗盘
-              </span>
+              <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
+                border border-amber-400/30 mb-6">
+                <span className="text-xs font-bold tracking-[0.3em] text-gradient-gold uppercase">
+                  灵魂本质
+                </span>
+              </div>
+
+              <div className="relative inline-block mb-4">
+                <div className="absolute inset-0 blur-xl bg-gradient-to-r from-purple-400 to-pink-400 opacity-40 rounded-full" />
+                <h3 className="relative text-4xl md:text-5xl text-gradient-purple font-display drop-shadow-lg">
+                  {data.element}
+                </h3>
+              </div>
+
+              <p className="text-pink-300 text-lg font-light italic tracking-wide">
+                {data.archetype}
+              </p>
             </div>
 
-            <div className="space-y-5">
-              <div className="group">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-rose-50/50 to-transparent hover:from-rose-100/50 transition-all">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-rose-400 to-pink-400 flex items-center justify-center text-white text-sm font-bold shadow-lg">
-                    ★
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-rose-600 mb-1">综合运势</div>
-                    <div className="text-sm text-rose-700 leading-relaxed">{data.fortune.overall}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-pink-50/50 to-transparent hover:from-pink-100/50 transition-all">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-purple-400 to-pink-400 flex items-center justify-center text-white text-sm font-bold shadow-lg">
-                    💼
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-purple-600 mb-1">事业运势</div>
-                    <div className="text-sm text-rose-700 leading-relaxed">{data.fortune.career}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-red-50/50 to-transparent hover:from-red-100/50 transition-all">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-red-400 to-pink-400 flex items-center justify-center text-white text-sm font-bold shadow-lg">
-                    💝
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-red-600 mb-1">感情运势</div>
-                    <div className="text-sm text-rose-700 leading-relaxed">{data.fortune.love}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-orange-50/50 to-transparent hover:from-orange-100/50 transition-all">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-orange-400 to-amber-400 flex items-center justify-center text-white text-sm font-bold shadow-lg">
-                    🌿
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-orange-600 mb-1">健康运势</div>
-                    <div className="text-sm text-rose-700 leading-relaxed">{data.fortune.health}</div>
-                  </div>
-                </div>
-              </div>
-
-              <div className="group">
-                <div className="flex items-center gap-3 p-3 rounded-lg bg-gradient-to-r from-yellow-50/50 to-transparent hover:from-yellow-100/50 transition-all">
-                  <div className="w-8 h-8 rounded-full bg-gradient-to-br from-yellow-400 to-amber-400 flex items-center justify-center text-white text-sm font-bold shadow-lg">
-                    💰
-                  </div>
-                  <div className="flex-1">
-                    <div className="text-xs font-bold text-yellow-600 mb-1">财富运势</div>
-                    <div className="text-sm text-rose-700 leading-relaxed">{data.fortune.wealth}</div>
-                  </div>
-                </div>
-              </div>
+            <div className="bg-gradient-to-br from-white/5 to-white/0 rounded-2xl p-6 mb-6 border border-white/10">
+              <p className="text-purple-100 leading-relaxed text-sm md:text-base font-light">
+                {data.personalityAnalysis}
+              </p>
             </div>
 
-            <div className="mt-6 pt-4 border-t border-pink-200/30">
-              <div className="flex items-center justify-between bg-gradient-to-r from-pink-50/30 to-rose-50/30 rounded-lg p-4">
-                <div className="text-center">
-                  <div className="text-xs uppercase text-rose-600 font-bold tracking-wider mb-1">幸运方位</div>
-                  <div className="text-lg text-rose-800 font-display font-bold">{data.fortune.luckyDirection}</div>
+            {/* 幸运元素 */}
+            <div className="grid grid-cols-2 gap-4">
+              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10
+                border border-purple-400/20">
+                <span className="text-xs uppercase tracking-wider text-amber-300 block mb-2">幸运颜色</span>
+                <div className="flex items-center justify-center gap-2 mb-2">
+                  <div
+                    className="w-8 h-8 rounded-full border-2 border-white/30 shadow-lg"
+                    style={{
+                      backgroundColor: data.luckyColor.toLowerCase().includes('金') ? '#FFD700' :
+                        data.luckyColor.includes('红') ? '#FF6B6B' :
+                        data.luckyColor.includes('蓝') ? '#4ECDC4' :
+                        data.luckyColor.includes('绿') ? '#95E77E' :
+                        data.luckyColor.includes('紫') ? '#A78BFA' : '#FFB6C1'
+                    }}
+                  />
                 </div>
-                <div className="text-rose-300 text-2xl">🧭</div>
+                <span className="text-purple-200 font-light">{data.luckyColor}</span>
+              </div>
+
+              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-pink-500/10 to-amber-500/10
+                border border-pink-400/20">
+                <span className="text-xs uppercase tracking-wider text-amber-300 block mb-2">幸运数字</span>
+                <div className="text-4xl text-gradient-gold font-display font-bold my-1">
+                  {data.fortune.luckyNumber}
+                </div>
               </div>
             </div>
           </div>
 
-          <button
-            onClick={onReset}
-            className="w-full py-3 rounded-xl border border-pink-200/40 hover:bg-gradient-to-r hover:from-pink-100/50 hover:to-rose-100/50 text-rose-600 text-sm transition-all duration-300 transform hover:scale-105 shadow-sm hover:shadow-md hidden lg:block"
-          >
-            重新为他人占卜
-          </button>
+          {/* 运势罗盘 */}
+          <div className="glass-panel p-8 rounded-3xl mystical-glow hover-lift">
+            <div className="text-center mb-6">
+              <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
+                border border-amber-400/30">
+                <span className="text-xs font-bold tracking-[0.3em] text-gradient-gold uppercase">
+                  运势罗盘
+                </span>
+              </div>
+            </div>
+
+            <div className="space-y-4">
+              {/* 综合运势 */}
+              <div className="group">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-transparent
+                  hover:from-purple-500/20 smooth-transition border border-purple-400/20">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500
+                      flex items-center justify-center text-white text-lg font-bold shadow-lg shrink-0 mt-0.5">
+                      ★
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">综合运势</div>
+                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.overall}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 事业运势 */}
+              <div className="group">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-indigo-500/10 to-transparent
+                  hover:from-indigo-500/20 smooth-transition border border-indigo-400/20">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500
+                      flex items-center justify-center text-xl shadow-lg shrink-0 mt-0.5">
+                      💼
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">事业运势</div>
+                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.career}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 感情运势 */}
+              <div className="group">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-pink-500/10 to-transparent
+                  hover:from-pink-500/20 smooth-transition border border-pink-400/20">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-rose-500
+                      flex items-center justify-center text-xl shadow-lg shrink-0 mt-0.5">
+                      💝
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">感情运势</div>
+                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.love}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 健康运势 */}
+              <div className="group">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-emerald-500/10 to-transparent
+                  hover:from-emerald-500/20 smooth-transition border border-emerald-400/20">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-emerald-500 to-teal-500
+                      flex items-center justify-center text-xl shadow-lg shrink-0 mt-0.5">
+                      🌿
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">健康运势</div>
+                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.health}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* 财富运势 */}
+              <div className="group">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-amber-500/10 to-transparent
+                  hover:from-amber-500/20 smooth-transition border border-amber-400/20">
+                  <div className="flex items-start gap-4">
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-amber-500 to-yellow-500
+                      flex items-center justify-center text-xl shadow-lg shrink-0 mt-0.5">
+                      💰
+                    </div>
+                    <div className="flex-1">
+                      <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">财富运势</div>
+                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.wealth}</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* 幸运方位 */}
+            <div className="mt-6 pt-6 border-t border-purple-400/20">
+              <div className="flex items-center justify-between p-4 rounded-xl
+                bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/20">
+                <div>
+                  <div className="text-xs uppercase text-amber-300 font-bold tracking-wider mb-1">幸运方位</div>
+                  <div className="text-xl text-gradient-purple font-display font-bold">{data.fortune.luckyDirection}</div>
+                </div>
+                <div className="text-4xl opacity-50">🧭</div>
+              </div>
+            </div>
+          </div>
         </div>
 
-        {/* Right Column: Perfume Showcase */}
-        <div className="xl:col-span-2 lg:col-span-1">
-          <div className="glass-panel p-8 rounded-2xl relative overflow-hidden border-t border-pink-300/40">
-            {/* Decorative Elements */}
-            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-pink-300/20 to-rose-300/20 rounded-full blur-2xl"></div>
-            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-purple-300/15 to-pink-300/15 rounded-full blur-xl"></div>
+        {/* 右侧栏 - 香氛展示 */}
+        <div className="lg:col-span-7">
+          <div className="glass-panel p-10 rounded-3xl border-gold mystical-glow hover-lift">
+            {/* 装饰光晕 */}
+            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-pink-500/10 to-purple-500/10
+              rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-amber-500/10 to-pink-500/10
+              rounded-full blur-2xl pointer-events-none" />
 
-            {/* Perfume Header */}
-            <div className="relative z-10 text-center mb-8">
-              <div className="inline-flex items-center gap-2 mb-4">
-                <span className="text-2xl">💎</span>
-                <span className="text-xs font-bold tracking-[0.4em] text-rose-600 uppercase">灵魂香气</span>
-                <span className="text-2xl">💎</span>
+            {/* 香氛标题区 */}
+            <div className="relative z-10 text-center mb-10">
+              <div className="inline-flex items-center gap-3 mb-6">
+                <span className="text-3xl">💎</span>
+                <span className="text-xs font-bold tracking-[0.4em] text-gradient-gold uppercase">
+                  灵魂香气
+                </span>
+                <span className="text-3xl">💎</span>
               </div>
-              <h2 className="text-4xl md:text-5xl font-display bg-gradient-to-b from-rose-900 via-rose-700 to-pink-600 bg-clip-text text-transparent font-bold leading-tight mb-3">
+
+              <h2 className="text-4xl md:text-5xl lg:text-6xl font-display text-gradient-gold
+                animate-text-shine drop-shadow-[0_0_25px_rgba(255,215,0,0.3)]
+                leading-tight mb-4">
                 {data.perfumeName}
               </h2>
-              <p className="text-lg text-pink-600 italic font-serif mb-4">"{data.perfumeTagline}"</p>
-              <div className="inline-block">
-                <span className="bg-gradient-to-r from-pink-100/80 to-rose-100/80 border border-pink-200/60 px-4 py-2 rounded-full text-sm text-rose-800 font-semibold shadow-sm">
+
+              <p className="text-xl md:text-2xl text-pink-300 italic font-light mb-6 leading-relaxed">
+                "{data.perfumeTagline}"
+              </p>
+
+              <div className="inline-block px-6 py-3 rounded-full
+                bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-amber-500/20
+                border border-amber-400/30 backdrop-blur-sm">
+                <span className="text-amber-200 font-semibold tracking-wide">
                   {data.fragranceFamily}
                 </span>
               </div>
             </div>
 
-            {/* Product Card */}
-            <div className="relative z-10 mb-8">
-              <div className="bg-gradient-to-br from-rose-50/80 via-pink-50/60 to-white/40 rounded-2xl p-6 border border-pink-200/40 shadow-xl">
-                <div className="text-center mb-4">
-                  <div className="inline-flex items-center gap-2 mb-2">
-                    <span className="text-rose-400 text-xl">🏷️</span>
-                    <span className="text-xs uppercase text-rose-600 font-bold tracking-wider">真实推荐</span>
+            {/* 产品推荐卡片 */}
+            <div className="relative z-10 mb-10">
+              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl p-8
+                border border-white/20 shadow-2xl backdrop-blur-sm">
+                <div className="text-center">
+                  <div className="inline-flex items-center gap-2 mb-4">
+                    <span className="text-amber-400 text-2xl">🏷️</span>
+                    <span className="text-xs uppercase text-amber-300 font-bold tracking-[0.3em]">
+                      真实推荐
+                    </span>
                   </div>
-                  <div className="text-xl md:text-2xl text-rose-900 font-display font-bold leading-tight">
+                  <div className="text-2xl md:text-3xl text-gradient-purple font-display font-bold leading-snug">
                     {data.perfumeRecommendation}
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Scent Notes */}
-            <div className="relative z-10 mb-8">
-              <div className="text-center mb-4">
-                <span className="text-xs uppercase text-rose-600 font-bold tracking-wider">香调层次</span>
+            {/* 香调层次 */}
+            <div className="relative z-10 mb-10">
+              <div className="text-center mb-6">
+                <span className="text-xs uppercase text-amber-300 font-bold tracking-[0.3em]">香调层次</span>
               </div>
-              <div className="space-y-4">
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-rose-50/60 to-transparent">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-rose-300 to-pink-300 flex items-center justify-center text-white font-bold shadow-md">
+
+              <div className="space-y-5">
+                {/* 前调 */}
+                <div className="flex items-start gap-5 p-5 rounded-2xl
+                  bg-gradient-to-r from-pink-500/10 to-transparent border border-pink-400/20
+                  hover:from-pink-500/20 smooth-transition group">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500
+                    flex items-center justify-center text-white text-xl font-bold shadow-xl shrink-0
+                    group-hover:scale-110 smooth-transition">
                     T
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-bold text-rose-500 mb-1">前调 TOP</div>
-                    <div className="text-sm text-rose-700">{data.notes.top}</div>
+                    <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">前调 Top Notes</div>
+                    <div className="text-base text-purple-100 leading-relaxed font-light">{data.notes.top}</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-pink-50/60 to-transparent">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-300 to-purple-300 flex items-center justify-center text-white font-bold shadow-md">
+                {/* 中调 */}
+                <div className="flex items-start gap-5 p-5 rounded-2xl
+                  bg-gradient-to-r from-purple-500/10 to-transparent border border-purple-400/20
+                  hover:from-purple-500/20 smooth-transition group">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-400 to-violet-500
+                    flex items-center justify-center text-white text-xl font-bold shadow-xl shrink-0
+                    group-hover:scale-110 smooth-transition">
                     H
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-bold text-pink-500 mb-1">中调 HEART</div>
-                    <div className="text-sm text-rose-700">{data.notes.heart}</div>
+                    <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">中调 Heart Notes</div>
+                    <div className="text-base text-purple-100 leading-relaxed font-light">{data.notes.heart}</div>
                   </div>
                 </div>
 
-                <div className="flex items-center gap-4 p-3 rounded-lg bg-gradient-to-r from-purple-50/60 to-transparent">
-                  <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-300 to-fuchsia-300 flex items-center justify-center text-white font-bold shadow-md">
+                {/* 后调 */}
+                <div className="flex items-start gap-5 p-5 rounded-2xl
+                  bg-gradient-to-r from-amber-500/10 to-transparent border border-amber-400/20
+                  hover:from-amber-500/20 smooth-transition group">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-400 to-yellow-500
+                    flex items-center justify-center text-white text-xl font-bold shadow-xl shrink-0
+                    group-hover:scale-110 smooth-transition">
                     B
                   </div>
                   <div className="flex-1">
-                    <div className="text-xs font-bold text-purple-500 mb-1">后调 BASE</div>
-                    <div className="text-sm text-rose-700">{data.notes.base}</div>
+                    <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">后调 Base Notes</div>
+                    <div className="text-base text-purple-100 leading-relaxed font-light">{data.notes.base}</div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Essence Description */}
+            {/* 香气精髓 */}
             <div className="relative z-10">
-              <div className="bg-gradient-to-r from-rose-100/50 to-pink-100/50 rounded-xl p-5 border border-pink-200/30">
-                <div className="flex items-center gap-2 mb-3">
-                  <span className="text-rose-400 text-lg">✨</span>
-                  <h4 className="text-sm font-bold text-rose-800 font-display">香气精髓</h4>
+              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-7
+                border border-purple-400/20 backdrop-blur-sm">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="text-amber-400 text-2xl">✨</span>
+                  <h4 className="text-base font-bold text-gradient-gold font-display uppercase tracking-wider">
+                    香气精髓
+                  </h4>
                 </div>
-                <p className="text-rose-700 text-sm italic leading-relaxed">
+                <p className="text-purple-100 leading-relaxed italic font-light mb-6">
                   {data.perfumeDescription}
                 </p>
-              </div>
 
-              <div className="mt-4 text-center">
-                <p className="text-xs text-rose-600 uppercase tracking-wider flex items-center justify-center gap-2">
-                  <span>💫</span>
-                  <span>使用建议：{data.usageAdvice}</span>
-                  <span>💫</span>
-                </p>
+                <div className="pt-4 border-t border-purple-400/20">
+                  <div className="flex items-center gap-2 text-amber-300/90">
+                    <span className="text-lg">💫</span>
+                    <span className="text-xs uppercase tracking-wider font-semibold">使用建议：</span>
+                  </div>
+                  <p className="text-purple-200 mt-2 text-sm font-light leading-relaxed">
+                    {data.usageAdvice}
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
 
-      {/* Mobile Action Button */}
-      <div className="lg:hidden mt-8 text-center">
+      {/* 底部操作按钮 */}
+      <div className="mt-12 text-center">
         <button
           onClick={onReset}
-          className="px-8 py-3 bg-gradient-to-r from-rose-400 to-pink-400 hover:from-rose-500 hover:to-pink-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:scale-105"
+          className="px-10 py-5 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500
+            hover:from-purple-700 hover:via-pink-700 hover:to-amber-600
+            text-white font-semibold text-lg rounded-full
+            shadow-xl hover:shadow-2xl
+            smooth-transition transform hover:scale-105
+            border-2 border-white/20
+            mystical-glow relative overflow-hidden group"
         >
-          <span className="flex items-center gap-2">
+          <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
+            translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
+          <span className="relative z-10 flex items-center gap-3">
             <span>🔮</span>
             <span>重新为他人占卜</span>
+            <span>✨</span>
           </span>
         </button>
       </div>
