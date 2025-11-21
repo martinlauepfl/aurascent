@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { FortuneResult } from '../types';
 
 interface ResultProps {
@@ -9,13 +9,27 @@ interface ResultProps {
 }
 
 export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
+  const resultRef = useRef<HTMLDivElement>(null);
+
+  useEffect(() => {
+    // 平滑滚动到结果区域
+    if (resultRef.current) {
+      setTimeout(() => {
+        resultRef.current?.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }, 300);
+    }
+  }, []);
+
   return (
-    <div className="w-full max-w-7xl mx-auto animate-fade-in px-4">
+    <div ref={resultRef} className="w-full max-w-7xl mx-auto animate-fade-in px-4">
       {/* 顶部标题 */}
       <div className="mb-12 text-center">
         <div className="inline-block relative">
           <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 opacity-20" />
-          <h2 className="relative text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold animate-text-shine
+          <h2 className="relative text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold animate-text-shine animate-celebration
             drop-shadow-[0_0_20px_rgba(255,215,0,0.3)] mb-3">
             你的香气密码
           </h2>
@@ -29,7 +43,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
         {/* 左侧栏 - 个人分析 */}
         <div className="lg:col-span-5 space-y-6">
           {/* 灵魂本质卡片 */}
-          <div className="glass-panel p-8 rounded-3xl border-gold mystical-glow hover-lift">
+          <div className="glass-panel p-8 rounded-3xl border-gold mystical-glow hover-lift animate-scale-in delay-100">
             <div className="text-center mb-6">
               <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
                 border border-amber-400/30 mb-6">
@@ -87,7 +101,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
           </div>
 
           {/* 运势罗盘 */}
-          <div className="glass-panel p-8 rounded-3xl mystical-glow hover-lift">
+          <div className="glass-panel p-8 rounded-3xl mystical-glow hover-lift animate-scale-in delay-200">
             <div className="text-center mb-6">
               <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
                 border border-amber-400/30">
@@ -200,7 +214,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
 
         {/* 右侧栏 - 香氛展示 */}
         <div className="lg:col-span-7">
-          <div className="glass-panel p-10 rounded-3xl border-gold mystical-glow hover-lift">
+          <div className="glass-panel p-10 rounded-3xl border-gold mystical-glow hover-lift animate-scale-in delay-300">
             {/* 装饰光晕 */}
             <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-pink-500/10 to-purple-500/10
               rounded-full blur-3xl pointer-events-none" />
@@ -338,7 +352,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
       </div>
 
       {/* 底部操作按钮 */}
-      <div className="mt-12 text-center">
+      <div className="mt-12 text-center animate-scale-in delay-500">
         <button
           onClick={onReset}
           className="px-10 py-5 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500
