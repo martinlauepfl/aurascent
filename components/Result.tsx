@@ -371,6 +371,23 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
             <span>✨</span>
           </span>
         </button>
+
+        {/* 品牌标识 */}
+        <div className="mt-10 pb-4 animate-scale-in delay-600">
+          <div className="inline-flex flex-col items-center gap-2 px-6 py-4 rounded-2xl
+            bg-gradient-to-r from-purple-500/5 to-pink-500/5 border border-purple-400/10">
+            <div className="text-gradient-gold font-display text-xl tracking-wider">
+              AuraScent
+            </div>
+            <div className="text-purple-300/60 text-xs tracking-[0.3em] uppercase font-light">
+              Where Ancient Wisdom Meets Modern Soul
+            </div>
+            <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-1" />
+            <div className="text-purple-400/50 text-xs mt-1 font-light">
+              解读星辰密码 · 寻找灵魂香气
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
