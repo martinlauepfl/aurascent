@@ -3,7 +3,7 @@ import OpenAI from 'openai';
 
 // Initialize Bailian API client (OpenAI compatible)
 const client = new OpenAI({
-  apiKey: process.env.BAILIAN_API_KEY || "",
+  apiKey: process.env.BAILIAN || "",
   baseURL: "https://dashscope.aliyuncs.com/compatible-mode/v1",
 });
 
@@ -43,17 +43,17 @@ export async function POST(request: NextRequest) {
     const profile = await request.json();
 
     // Check if API key is available
-    if (!process.env.BAILIAN_API_KEY) {
-      console.error("BAILIAN_API_KEY is not set");
+    if (!process.env.BAILIAN) {
+      console.error("BAILIAN API key is not set");
       return NextResponse.json(
         { error: "API key not configured" },
         { status: 500 }
       );
     }
 
-    console.log("Bailian API Key available, length:", process.env.BAILIAN_API_KEY.length);
+    console.log("Bailian API Key available, length:", process.env.BAILIAN.length);
 
-    const model = "qwen-max";
+    const model = "qwen3-max";
 
     const prompt = `
 请扮演一位精通西方占星学和中国八字命理的神秘大师，同时是一位专业的调香师。
