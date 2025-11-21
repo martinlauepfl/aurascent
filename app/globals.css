@@ -11,8 +11,8 @@
 
 body {
   font-family: 'Crimson Pro', 'Georgia', serif;
-  background: linear-gradient(135deg, #1a0b2e 0%, #2d1b4e 50%, #1f0a33 100%);
-  color: #f4e4f0;
+  background: linear-gradient(135deg, #1a0a0f 0%, #2d1618 50%, #1f0d12 100%);
+  color: #f9f1f0;
   min-height: 100vh;
   position: relative;
   overflow-x: hidden;
@@ -26,13 +26,13 @@ h1, h2, h3, h4, .font-display {
   letter-spacing: 1.5px;
 }
 
-/* 奢华毛玻璃态设计 3.0 */
+/* 奢华毛玻璃态设计 3.0 - 玫瑰金版 */
 .glass-panel {
   background: linear-gradient(
     135deg,
-    rgba(139, 92, 246, 0.08) 0%,
-    rgba(236, 72, 153, 0.06) 50%,
-    rgba(167, 139, 250, 0.08) 100%
+    rgba(160, 21, 62, 0.12) 0%,
+    rgba(212, 165, 165, 0.08) 50%,
+    rgba(183, 110, 121, 0.10) 100%
   );
   backdrop-filter: blur(24px) saturate(180%);
   -webkit-backdrop-filter: blur(24px) saturate(180%);
@@ -40,8 +40,8 @@ h1, h2, h3, h4, .font-display {
   border-top-color: rgba(255, 255, 255, 0.25);
   border-left-color: rgba(255, 255, 255, 0.25);
   box-shadow:
-    0 8px 32px 0 rgba(139, 92, 246, 0.15),
-    0 2px 8px 0 rgba(236, 72, 153, 0.1),
+    0 8px 32px 0 rgba(160, 21, 62, 0.18),
+    0 2px 8px 0 rgba(212, 165, 165, 0.12),
     inset 0 1px 0 rgba(255, 255, 255, 0.1),
     inset 0 -1px 0 rgba(0, 0, 0, 0.1);
   position: relative;
@@ -72,17 +72,17 @@ h1, h2, h3, h4, .font-display {
 input[type="text"],
 input[type="date"],
 input[type="time"] {
-  color: #2d1b4e !important;
+  color: #2d1618 !important;
   font-weight: 400;
 }
 
 input[type="date"]::-webkit-date-and-time-value-text,
 input[type="time"]::-webkit-time-display-value {
-  color: #2d1b4e !important;
+  color: #2d1618 !important;
 }
 
 input::placeholder {
-  color: rgba(45, 27, 78, 0.5) !important;
+  color: rgba(45, 22, 24, 0.5) !important;
   font-style: italic;
   font-weight: 300;
 }
@@ -134,19 +134,19 @@ input::placeholder {
   animation: gradientFlow 15s ease infinite;
 }
 
-/* 光晕脉冲 */
+/* 光晕脉冲 - 玫瑰金版 */
 @keyframes glowPulse {
   0%, 100% {
     box-shadow:
-      0 0 20px rgba(139, 92, 246, 0.4),
-      0 0 40px rgba(236, 72, 153, 0.2),
-      0 0 60px rgba(167, 139, 250, 0.1);
+      0 0 20px rgba(160, 21, 62, 0.4),
+      0 0 40px rgba(212, 165, 165, 0.25),
+      0 0 60px rgba(183, 110, 121, 0.15);
   }
   50% {
     box-shadow:
-      0 0 30px rgba(139, 92, 246, 0.6),
-      0 0 60px rgba(236, 72, 153, 0.3),
-      0 0 90px rgba(167, 139, 250, 0.2);
+      0 0 30px rgba(160, 21, 62, 0.6),
+      0 0 60px rgba(212, 165, 165, 0.35),
+      0 0 90px rgba(183, 110, 121, 0.25);
   }
 }
 .animate-glow-pulse {
@@ -214,43 +214,43 @@ input::placeholder {
 
 /* === 工具类 === */
 
-/* 金色文本渐变 */
+/* 金色文本渐变 - 香槟金版 */
 .text-gradient-gold {
   background: linear-gradient(
     135deg,
-    #FFD700 0%,
-    #FDB931 25%,
+    #D4AF37 0%,
+    #F4C430 25%,
     #FFE5B4 50%,
-    #FDB931 75%,
-    #FFD700 100%
+    #F4C430 75%,
+    #D4AF37 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* 紫粉渐变文本 */
+/* 玫瑰金渐变文本 */
 .text-gradient-purple {
   background: linear-gradient(
     135deg,
-    #9333EA 0%,
-    #EC4899 50%,
-    #A78BFA 100%
+    #A0153E 0%,
+    #D4A5A5 50%,
+    #E8B4B8 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-/* 神秘光效 */
+/* 神秘光效 - 玫瑰金版 */
 .mystical-glow {
   box-shadow:
-    0 0 20px rgba(147, 51, 234, 0.3),
-    0 0 40px rgba(236, 72, 153, 0.2),
-    0 0 60px rgba(167, 139, 250, 0.1);
+    0 0 20px rgba(160, 21, 62, 0.35),
+    0 0 40px rgba(212, 165, 165, 0.25),
+    0 0 60px rgba(183, 110, 121, 0.15);
 }
 
-/* 悬停提升效果 */
+/* 悬停提升效果 - 玫瑰金版 */
 .hover-lift {
   transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
 }
@@ -258,8 +258,8 @@ input::placeholder {
 .hover-lift:hover {
   transform: translateY(-8px) scale(1.02);
   box-shadow:
-    0 20px 60px rgba(139, 92, 246, 0.25),
-    0 10px 30px rgba(236, 72, 153, 0.15);
+    0 20px 60px rgba(160, 21, 62, 0.3),
+    0 10px 30px rgba(212, 165, 165, 0.2);
 }
 
 /* 平滑过渡 */
@@ -269,33 +269,33 @@ input::placeholder {
 
 /* 金色边框 */
 .border-gold {
-  border: 1px solid rgba(255, 215, 0, 0.3);
-  border-top-color: rgba(255, 215, 0, 0.5);
-  border-left-color: rgba(255, 215, 0, 0.5);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-top-color: rgba(212, 175, 55, 0.5);
+  border-left-color: rgba(212, 175, 55, 0.5);
 }
 
-/* 滚动条美化 */
+/* 滚动条美化 - 玫瑰金版 */
 ::-webkit-scrollbar {
   width: 8px;
   height: 8px;
 }
 
 ::-webkit-scrollbar-track {
-  background: rgba(45, 27, 78, 0.2);
+  background: rgba(45, 22, 24, 0.2);
 }
 
 ::-webkit-scrollbar-thumb {
-  background: linear-gradient(135deg, #9333EA, #EC4899);
+  background: linear-gradient(135deg, #A0153E, #D4A5A5);
   border-radius: 10px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(135deg, #A855F7, #F472B6);
+  background: linear-gradient(135deg, #C41E3A, #E8B4B8);
 }
 
-/* 选中文本样式 */
+/* 选中文本样式 - 玫瑰金版 */
 ::selection {
-  background: rgba(236, 72, 153, 0.3);
+  background: rgba(212, 165, 165, 0.35);
   color: #FFE5B4;
 }
 

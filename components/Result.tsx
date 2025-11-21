@@ -28,13 +28,13 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
       {/* 顶部标题 */}
       <div className="mb-12 text-center">
         <div className="inline-block relative">
-          <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 opacity-20" />
+          <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-[#A0153E] via-[#D4A5A5] to-amber-400 opacity-20" />
           <h2 className="relative text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold animate-text-shine animate-celebration
             drop-shadow-[0_0_20px_rgba(255,215,0,0.3)] mb-3">
             你的香气密码
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-full mx-auto mb-2" />
-          <p className="text-purple-200/70 text-sm tracking-widest uppercase">Your Soul Signature</p>
+          <p className="text-[#E8B4B8]/70 text-sm tracking-widest uppercase">Your Soul Signature</p>
         </div>
       </div>
 
@@ -45,7 +45,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
           {/* 灵魂本质卡片 */}
           <div className="glass-panel p-8 rounded-3xl border-gold mystical-glow hover-lift animate-scale-in delay-100">
             <div className="text-center mb-6">
-              <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
+              <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#A0153E]/20 to-[#D4A5A5]/20
                 border border-amber-400/30 mb-6">
                 <span className="text-xs font-bold tracking-[0.3em] text-gradient-gold uppercase">
                   你的灵魂本质
@@ -53,27 +53,27 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
               </div>
 
               <div className="relative inline-block mb-4">
-                <div className="absolute inset-0 blur-xl bg-gradient-to-r from-purple-400 to-pink-400 opacity-40 rounded-full" />
+                <div className="absolute inset-0 blur-xl bg-gradient-to-r from-[#C41E3A] to-[#D4A5A5] opacity-40 rounded-full" />
                 <h3 className="relative text-4xl md:text-5xl text-gradient-purple font-display drop-shadow-lg">
                   {data.element}
                 </h3>
               </div>
 
-              <p className="text-pink-300 text-lg font-light italic tracking-wide">
+              <p className="text-[#D4A5A5] text-lg font-light italic tracking-wide">
                 {data.archetype}
               </p>
             </div>
 
             <div className="bg-gradient-to-br from-white/5 to-white/0 rounded-2xl p-6 mb-6 border border-white/10">
-              <p className="text-purple-100 leading-relaxed text-sm md:text-base font-light">
+              <p className="text-[#E8B4B8] leading-relaxed text-sm md:text-base font-light">
                 {data.personalityAnalysis}
               </p>
             </div>
 
             {/* 幸运元素 */}
             <div className="grid grid-cols-2 gap-4">
-              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-purple-500/10 to-pink-500/10
-                border border-purple-400/20">
+              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-[#A0153E]/10 to-[#D4A5A5]/10
+                border border-[#C41E3A]/20">
                 <span className="text-xs uppercase tracking-wider text-amber-300 block mb-2">幸运颜色</span>
                 <div className="flex items-center justify-center gap-2 mb-2">
                   <div
@@ -87,11 +87,11 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
                     }}
                   />
                 </div>
-                <span className="text-purple-200 font-light">{data.luckyColor}</span>
+                <span className="text-[#E8B4B8] font-light">{data.luckyColor}</span>
               </div>
 
-              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-pink-500/10 to-amber-500/10
-                border border-pink-400/20">
+              <div className="text-center p-4 rounded-xl bg-gradient-to-br from-[#D4A5A5]/10 to-amber-500/10
+                border border-[#D4A5A5]/20">
                 <span className="text-xs uppercase tracking-wider text-amber-300 block mb-2">幸运数字</span>
                 <div className="text-4xl text-gradient-gold font-display font-bold my-1">
                   {data.fortune.luckyNumber}
@@ -103,7 +103,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
           {/* 运势罗盘 */}
           <div className="glass-panel p-8 rounded-3xl mystical-glow hover-lift animate-scale-in delay-200">
             <div className="text-center mb-6">
-              <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
+              <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#A0153E]/20 to-[#D4A5A5]/20
                 border border-amber-400/30">
                 <span className="text-xs font-bold tracking-[0.3em] text-gradient-gold uppercase">
                   你的星辰指引
@@ -114,16 +114,16 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
             <div className="space-y-4">
               {/* 综合运势 */}
               <div className="group">
-                <div className="p-4 rounded-xl bg-gradient-to-r from-purple-500/10 to-transparent
-                  hover:from-purple-500/20 smooth-transition border border-purple-400/20">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-[#A0153E]/10 to-transparent
+                  hover:from-[#A0153E]/20 smooth-transition border border-[#C41E3A]/20">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-500 to-pink-500
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#A0153E] to-[#D4A5A5]
                       flex items-center justify-center text-white text-lg font-bold shadow-lg shrink-0 mt-0.5">
                       ★
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">综合运势</div>
-                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.overall}</div>
+                      <div className="text-sm text-[#E8B4B8] leading-relaxed font-light">{data.fortune.overall}</div>
                     </div>
                   </div>
                 </div>
@@ -131,16 +131,16 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
 
               {/* 事业运势 */}
               <div className="group">
-                <div className="p-4 rounded-xl bg-gradient-to-r from-indigo-500/10 to-transparent
-                  hover:from-indigo-500/20 smooth-transition border border-indigo-400/20">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-[#A0153E]/10 to-transparent
+                  hover:from-[#A0153E]/20 smooth-transition border border-[#C41E3A]/20">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-indigo-500 to-violet-500
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#A0153E] to-[#C88B8B]
                       flex items-center justify-center text-xl shadow-lg shrink-0 mt-0.5">
                       💼
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">事业运势</div>
-                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.career}</div>
+                      <div className="text-sm text-[#E8B4B8] leading-relaxed font-light">{data.fortune.career}</div>
                     </div>
                   </div>
                 </div>
@@ -148,16 +148,16 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
 
               {/* 感情运势 */}
               <div className="group">
-                <div className="p-4 rounded-xl bg-gradient-to-r from-pink-500/10 to-transparent
-                  hover:from-pink-500/20 smooth-transition border border-pink-400/20">
+                <div className="p-4 rounded-xl bg-gradient-to-r from-[#D4A5A5]/10 to-transparent
+                  hover:from-[#D4A5A5]/20 smooth-transition border border-[#D4A5A5]/20">
                   <div className="flex items-start gap-4">
-                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-pink-500 to-rose-500
+                    <div className="w-10 h-10 rounded-full bg-gradient-to-br from-[#D4A5A5] to-[#E8B4B8]
                       flex items-center justify-center text-xl shadow-lg shrink-0 mt-0.5">
                       💝
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">感情运势</div>
-                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.love}</div>
+                      <div className="text-sm text-[#E8B4B8] leading-relaxed font-light">{data.fortune.love}</div>
                     </div>
                   </div>
                 </div>
@@ -174,7 +174,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">健康运势</div>
-                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.health}</div>
+                      <div className="text-sm text-[#E8B4B8] leading-relaxed font-light">{data.fortune.health}</div>
                     </div>
                   </div>
                 </div>
@@ -191,7 +191,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
                     </div>
                     <div className="flex-1">
                       <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">财富运势</div>
-                      <div className="text-sm text-purple-100 leading-relaxed font-light">{data.fortune.wealth}</div>
+                      <div className="text-sm text-[#E8B4B8] leading-relaxed font-light">{data.fortune.wealth}</div>
                     </div>
                   </div>
                 </div>
@@ -199,9 +199,9 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
             </div>
 
             {/* 幸运方位 */}
-            <div className="mt-6 pt-6 border-t border-purple-400/20">
+            <div className="mt-6 pt-6 border-t border-[#C41E3A]/20">
               <div className="flex items-center justify-between p-4 rounded-xl
-                bg-gradient-to-r from-purple-500/10 to-pink-500/10 border border-purple-400/20">
+                bg-gradient-to-r from-[#A0153E]/10 to-[#D4A5A5]/10 border border-[#C41E3A]/20">
                 <div>
                   <div className="text-xs uppercase text-amber-300 font-bold tracking-wider mb-1">幸运方位</div>
                   <div className="text-xl text-gradient-purple font-display font-bold">{data.fortune.luckyDirection}</div>
@@ -216,9 +216,9 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
         <div className="lg:col-span-7">
           <div className="glass-panel p-10 rounded-3xl border-gold mystical-glow hover-lift animate-scale-in delay-300">
             {/* 装饰光晕 */}
-            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-pink-500/10 to-purple-500/10
+            <div className="absolute top-0 right-0 w-48 h-48 bg-gradient-to-br from-[#D4A5A5]/10 to-[#A0153E]/10
               rounded-full blur-3xl pointer-events-none" />
-            <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-amber-500/10 to-pink-500/10
+            <div className="absolute bottom-0 left-0 w-40 h-40 bg-gradient-to-tr from-amber-500/10 to-[#D4A5A5]/10
               rounded-full blur-2xl pointer-events-none" />
 
             {/* 香氛标题区 */}
@@ -237,12 +237,12 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
                 {data.perfumeName}
               </h2>
 
-              <p className="text-xl md:text-2xl text-pink-300 italic font-light mb-6 leading-relaxed">
+              <p className="text-xl md:text-2xl text-[#D4A5A5] italic font-light mb-6 leading-relaxed">
                 "{data.perfumeTagline}"
               </p>
 
               <div className="inline-block px-6 py-3 rounded-full
-                bg-gradient-to-r from-purple-500/20 via-pink-500/20 to-amber-500/20
+                bg-gradient-to-r from-[#A0153E]/20 via-[#D4A5A5]/20 to-amber-500/20
                 border border-amber-400/30 backdrop-blur-sm">
                 <span className="text-amber-200 font-semibold tracking-wide">
                   {data.fragranceFamily}
@@ -277,31 +277,31 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
               <div className="space-y-5">
                 {/* 前调 */}
                 <div className="flex items-start gap-5 p-5 rounded-2xl
-                  bg-gradient-to-r from-pink-500/10 to-transparent border border-pink-400/20
-                  hover:from-pink-500/20 smooth-transition group">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-400 to-pink-500
+                  bg-gradient-to-r from-[#D4A5A5]/10 to-transparent border border-[#D4A5A5]/20
+                  hover:from-[#D4A5A5]/20 smooth-transition group">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#E8B4B8] to-[#D4A5A5]
                     flex items-center justify-center text-white text-xl font-bold shadow-xl shrink-0
                     group-hover:scale-110 smooth-transition">
                     T
                   </div>
                   <div className="flex-1">
                     <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">前调 Top Notes</div>
-                    <div className="text-base text-purple-100 leading-relaxed font-light">{data.notes.top}</div>
+                    <div className="text-base text-[#E8B4B8] leading-relaxed font-light">{data.notes.top}</div>
                   </div>
                 </div>
 
                 {/* 中调 */}
                 <div className="flex items-start gap-5 p-5 rounded-2xl
-                  bg-gradient-to-r from-purple-500/10 to-transparent border border-purple-400/20
-                  hover:from-purple-500/20 smooth-transition group">
-                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-400 to-violet-500
+                  bg-gradient-to-r from-[#A0153E]/10 to-transparent border border-[#C41E3A]/20
+                  hover:from-[#A0153E]/20 smooth-transition group">
+                  <div className="w-14 h-14 rounded-2xl bg-gradient-to-br from-[#C41E3A] to-[#C88B8B]
                     flex items-center justify-center text-white text-xl font-bold shadow-xl shrink-0
                     group-hover:scale-110 smooth-transition">
                     H
                   </div>
                   <div className="flex-1">
                     <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">中调 Heart Notes</div>
-                    <div className="text-base text-purple-100 leading-relaxed font-light">{data.notes.heart}</div>
+                    <div className="text-base text-[#E8B4B8] leading-relaxed font-light">{data.notes.heart}</div>
                   </div>
                 </div>
 
@@ -316,7 +316,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
                   </div>
                   <div className="flex-1">
                     <div className="text-xs font-bold text-amber-300 mb-2 uppercase tracking-wider">后调 Base Notes</div>
-                    <div className="text-base text-purple-100 leading-relaxed font-light">{data.notes.base}</div>
+                    <div className="text-base text-[#E8B4B8] leading-relaxed font-light">{data.notes.base}</div>
                   </div>
                 </div>
               </div>
@@ -324,24 +324,24 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
 
             {/* 香气精髓 */}
             <div className="relative z-10">
-              <div className="bg-gradient-to-br from-purple-500/10 to-pink-500/10 rounded-2xl p-7
-                border border-purple-400/20 backdrop-blur-sm">
+              <div className="bg-gradient-to-br from-[#A0153E]/10 to-[#D4A5A5]/10 rounded-2xl p-7
+                border border-[#C41E3A]/20 backdrop-blur-sm">
                 <div className="flex items-center gap-3 mb-4">
                   <span className="text-amber-400 text-2xl">✨</span>
                   <h4 className="text-base font-bold text-gradient-gold font-display uppercase tracking-wider">
                     香气精髓
                   </h4>
                 </div>
-                <p className="text-purple-100 leading-relaxed italic font-light mb-6">
+                <p className="text-[#E8B4B8] leading-relaxed italic font-light mb-6">
                   {data.perfumeDescription}
                 </p>
 
-                <div className="pt-4 border-t border-purple-400/20">
+                <div className="pt-4 border-t border-[#C41E3A]/20">
                   <div className="flex items-center gap-2 text-amber-300/90">
                     <span className="text-lg">💫</span>
                     <span className="text-xs uppercase tracking-wider font-semibold">灵感时刻：</span>
                   </div>
-                  <p className="text-purple-200 mt-2 text-sm font-light leading-relaxed">
+                  <p className="text-[#E8B4B8] mt-2 text-sm font-light leading-relaxed">
                     {data.usageAdvice}
                   </p>
                 </div>
@@ -355,8 +355,8 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
       <div className="mt-12 text-center animate-scale-in delay-500">
         <button
           onClick={onReset}
-          className="px-10 py-5 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500
-            hover:from-purple-700 hover:via-pink-700 hover:to-amber-600
+          className="px-10 py-5 bg-gradient-to-r from-[#C41E3A] via-[#E8B4B8] to-amber-500
+            hover:from-[#A0153E] hover:via-[#D4A5A5] hover:to-amber-600
             text-white font-semibold text-lg rounded-full
             shadow-xl hover:shadow-2xl
             smooth-transition transform hover:scale-105
@@ -375,15 +375,15 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
         {/* 品牌标识 */}
         <div className="mt-10 pb-4 animate-scale-in delay-600">
           <div className="inline-flex flex-col items-center gap-2 px-6 py-4 rounded-2xl
-            bg-gradient-to-r from-purple-500/5 to-pink-500/5 border border-purple-400/10">
+            bg-gradient-to-r from-[#A0153E]/5 to-[#D4A5A5]/5 border border-[#C41E3A]/10">
             <div className="text-gradient-gold font-display text-xl tracking-wider">
               AuraScent
             </div>
-            <div className="text-purple-300/60 text-xs tracking-[0.3em] uppercase font-light">
+            <div className="text-[#D4A5A5]/60 text-xs tracking-[0.3em] uppercase font-light">
               Where Ancient Wisdom Meets Modern Soul
             </div>
             <div className="h-px w-24 bg-gradient-to-r from-transparent via-amber-400/30 to-transparent mt-1" />
-            <div className="text-purple-400/50 text-xs mt-1 font-light">
+            <div className="text-[#C41E3A]/50 text-xs mt-1 font-light">
               解读星辰密码 · 寻找灵魂香气
             </div>
           </div>

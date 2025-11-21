@@ -29,7 +29,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
           </h2>
           <div className="h-1 w-24 mx-auto bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-full" />
         </div>
-        <p className="text-center text-purple-200 mt-4 text-sm font-light tracking-wide leading-relaxed">
+        <p className="text-center text-[#E8B4B8] mt-4 text-sm font-light tracking-wide leading-relaxed">
           每个灵魂都有专属的香气密码<br />
           让我们从你诞生的那一刻开始解读
         </p>
@@ -47,12 +47,12 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             type="text"
             value={name}
             onChange={(e) => setName(e.target.value)}
-            className="w-full bg-white/90 border-2 border-purple-200/40 rounded-xl px-5 py-4
+            className="w-full bg-white/90 border-2 border-[#E8B4B8]/40 rounded-xl px-5 py-4
               text-gray-800 font-light
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-purple-300/50 placeholder:italic
-              shadow-inner hover:border-purple-300/60"
+              placeholder:text-[#D4A5A5]/50 placeholder:italic
+              shadow-inner hover:border-[#D4A5A5]/60"
             placeholder="你想被如何称呼(选填)"
           />
         </div>
@@ -63,19 +63,19 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             flex items-center gap-2">
             <span className="w-1 h-1 rounded-full bg-amber-400"></span>
             诞生时刻
-            <span className="text-pink-300 text-xs">*</span>
+            <span className="text-[#D4A5A5] text-xs">*</span>
           </label>
           <input
             type="date"
             required
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
-            className="w-full bg-white/90 border-2 border-purple-200/40 rounded-xl px-5 py-4
+            className="w-full bg-white/90 border-2 border-[#E8B4B8]/40 rounded-xl px-5 py-4
               text-gray-800 font-light
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-purple-300/50
-              shadow-inner hover:border-purple-300/60
+              placeholder:text-[#D4A5A5]/50
+              shadow-inner hover:border-[#D4A5A5]/60
               [&::-webkit-calendar-picker-indicator]:cursor-pointer
               [&::-webkit-calendar-picker-indicator]:opacity-60
               [&::-webkit-calendar-picker-indicator]:hover:opacity-100"
@@ -94,12 +94,12 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             type="time"
             value={birthTime}
             onChange={(e) => setBirthTime(e.target.value)}
-            className="w-full bg-white/90 border-2 border-purple-200/40 rounded-xl px-5 py-4
+            className="w-full bg-white/90 border-2 border-[#E8B4B8]/40 rounded-xl px-5 py-4
               text-gray-800 font-light
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-purple-300/50
-              shadow-inner hover:border-purple-300/60
+              placeholder:text-[#D4A5A5]/50
+              shadow-inner hover:border-[#D4A5A5]/60
               [&::-webkit-calendar-picker-indicator]:cursor-pointer
               [&::-webkit-calendar-picker-indicator]:opacity-60
               [&::-webkit-calendar-picker-indicator]:hover:opacity-100"
@@ -123,8 +123,8 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
                 className={`py-4 px-6 rounded-xl text-sm font-medium smooth-transition relative overflow-hidden
                   ${
                     gender === g
-                      ? 'bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 text-white shadow-lg border-2 border-white/30 mystical-glow scale-105'
-                      : 'bg-white/40 border-2 border-purple-200/40 text-purple-300 hover:bg-white/60 hover:border-purple-300/60 hover:scale-102'
+                      ? 'bg-gradient-to-r from-[#A0153E] via-[#D4A5A5] to-amber-400 text-white shadow-lg border-2 border-white/30 mystical-glow scale-105'
+                      : 'bg-white/40 border-2 border-[#E8B4B8]/40 text-[#D4A5A5] hover:bg-white/60 hover:border-[#D4A5A5]/60 hover:scale-102'
                   }`}
               >
                 {gender === g && (
@@ -149,7 +149,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             }`}
         >
           {/* 渐变背景 */}
-          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 via-pink-600 to-amber-500
+          <div className="absolute inset-0 bg-gradient-to-r from-[#C41E3A] via-[#E8B4B8] to-amber-500
             transition-transform duration-500 group-hover:scale-110"></div>
 
           {/* 闪光效果 */}

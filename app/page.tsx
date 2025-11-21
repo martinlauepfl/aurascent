@@ -55,7 +55,7 @@ export default function Home() {
               <div className="inline-block relative">
                 {/* 发光圆环 */}
                 <div className="absolute inset-0 rounded-full opacity-30 blur-2xl
-                  bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 animate-glow-pulse" />
+                  bg-gradient-to-r from-[#A0153E] via-[#D4A5A5] to-amber-400 animate-glow-pulse" />
 
                 {/* 主标题 */}
                 <h1 className="relative text-5xl md:text-6xl lg:text-7xl font-display
@@ -70,7 +70,7 @@ export default function Home() {
             {/* 副标题 */}
             <div className="relative inline-block max-w-3xl mx-auto">
               <p className="text-lg md:text-xl font-light leading-relaxed mb-3
-                bg-gradient-to-r from-purple-200 via-pink-200 to-amber-200
+                bg-gradient-to-r from-[#E8B4B8] via-[#E8B4B8] to-amber-200
                 bg-clip-text text-transparent px-4">
                 解读你的星辰密码，寻找灵魂的香气
               </p>
@@ -79,7 +79,7 @@ export default function Home() {
 
             {/* 价值主张 */}
             <div className="mt-8 max-w-2xl mx-auto px-6">
-              <p className="text-sm md:text-base text-purple-200/80 leading-relaxed font-light italic">
+              <p className="text-sm md:text-base text-[#E8B4B8]/80 leading-relaxed font-light italic">
                 每个人都是宇宙中独一无二的存在。<br className="hidden md:block" />
                 通过古老的东方智慧与现代 AI 的结合，<br className="hidden md:block" />
                 我们为你揭示命运的轨迹，并找到那一缕专属于你的香气。
@@ -90,23 +90,23 @@ export default function Home() {
             <div className="flex items-center justify-center gap-8 mt-10">
               <div className="text-center">
                 <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">✨</span>
-                <p className="text-xs text-purple-300/60 mt-2 tracking-wider">星辰</p>
+                <p className="text-xs text-[#D4A5A5]/60 mt-2 tracking-wider">星辰</p>
               </div>
               <div className="text-center">
                 <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]"
                   style={{ animationDelay: '0.5s' }}>💎</span>
-                <p className="text-xs text-purple-300/60 mt-2 tracking-wider">灵魂</p>
+                <p className="text-xs text-[#D4A5A5]/60 mt-2 tracking-wider">灵魂</p>
               </div>
               <div className="text-center">
                 <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(167,139,250,0.5)]"
                   style={{ animationDelay: '1s' }}>🔮</span>
-                <p className="text-xs text-purple-300/60 mt-2 tracking-wider">香气</p>
+                <p className="text-xs text-[#D4A5A5]/60 mt-2 tracking-wider">香气</p>
               </div>
             </div>
 
             {/* 神秘感标语 */}
             <p className="mt-8 text-xs tracking-[0.4em] uppercase
-              text-purple-300/50 font-light">
+              text-[#D4A5A5]/50 font-light">
               Where Ancient Wisdom Meets Modern Soul
             </p>
           </div>
@@ -124,11 +124,11 @@ export default function Home() {
                 <div className="relative w-32 h-32 mx-auto mb-8">
                   {/* 外圈光晕 */}
                   <div className="absolute inset-0 rounded-full animate-rotate-glow
-                    bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400
+                    bg-gradient-to-r from-[#A0153E] via-[#D4A5A5] to-amber-400
                     opacity-30 blur-xl" />
                   {/* 中圈旋转 */}
                   <div className="absolute inset-4 rounded-full animate-rotate-glow
-                    bg-gradient-to-br from-violet-400 to-fuchsia-400 opacity-40"
+                    bg-gradient-to-br from-[#C88B8B] to-[#D4A5A5] opacity-40"
                     style={{ animationDuration: '15s', animationDirection: 'reverse' }} />
                   {/* 内圈水晶球 */}
                   <div className="absolute inset-6 bg-gradient-to-br from-white/10 to-white/5
@@ -142,23 +142,23 @@ export default function Home() {
                   星辰正在为你排列密码
                 </h3>
 
-                <div className="space-y-4 text-purple-200 text-sm">
+                <div className="space-y-4 text-[#E8B4B8] text-sm">
                   <div className="flex items-center justify-center gap-3 p-2 rounded-lg
-                    bg-gradient-to-r from-purple-500/10 to-transparent">
+                    bg-gradient-to-r from-[#A0153E]/10 to-transparent">
                     <div className="w-2 h-2 bg-gradient-to-r from-amber-400 to-yellow-300
                       rounded-full animate-glow-pulse"></div>
                     <span className="font-light tracking-wide">解析星辰运行轨迹</span>
                   </div>
                   <div className="flex items-center justify-center gap-3 p-2 rounded-lg
-                    bg-gradient-to-r from-pink-500/10 to-transparent"
+                    bg-gradient-to-r from-[#D4A5A5]/10 to-transparent"
                     style={{ animationDelay: '0.3s' }}>
-                    <div className="w-2 h-2 bg-gradient-to-r from-pink-400 to-rose-300
+                    <div className="w-2 h-2 bg-gradient-to-r from-[#D4A5A5] to-[#E8B4B8]
                       rounded-full animate-glow-pulse" style={{ animationDelay: '0.3s' }}></div>
                     <span className="font-light tracking-wide">计算生命灵数密码</span>
                   </div>
                   <div className="flex items-center justify-center gap-3 p-2 rounded-lg
-                    bg-gradient-to-r from-violet-500/10 to-transparent">
-                    <div className="w-2 h-2 bg-gradient-to-r from-violet-400 to-purple-300
+                    bg-gradient-to-r from-[#C88B8B]/10 to-transparent">
+                    <div className="w-2 h-2 bg-gradient-to-r from-[#C88B8B] to-[#A0153E]
                       rounded-full animate-glow-pulse" style={{ animationDelay: '0.6s' }}></div>
                     <span className="font-light tracking-wide">调配专属灵魂香氛</span>
                   </div>
@@ -178,14 +178,14 @@ export default function Home() {
                 <h3 className="text-2xl md:text-3xl font-display text-gradient-purple font-bold mb-4">
                   星辰暂时隐匿了踪迹
                 </h3>
-                <p className="text-purple-200 mb-8 leading-relaxed">
+                <p className="text-[#E8B4B8] mb-8 leading-relaxed">
                   宇宙的能量波动偶尔会干扰信号<br />
                   请稍后再试,你的香气密码依然在等待被解读
                 </p>
                 <button
                   onClick={handleReset}
-                  className="px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-500
-                    hover:from-purple-600 hover:via-pink-600 hover:to-amber-600
+                  className="px-8 py-4 bg-gradient-to-r from-[#A0153E] via-[#D4A5A5] to-amber-500
+                    hover:from-[#C41E3A] hover:via-[#E8B4B8] hover:to-amber-600
                     text-white font-semibold rounded-full
                     shadow-lg hover:shadow-2xl
                     transition-all duration-300 transform hover:scale-105
