@@ -68,28 +68,46 @@ export default function Home() {
             </div>
 
             {/* 副标题 */}
-            <div className="relative inline-block">
-              <p className="text-xl md:text-2xl font-light max-w-2xl mx-auto leading-relaxed mb-4
+            <div className="relative inline-block max-w-3xl mx-auto">
+              <p className="text-lg md:text-xl font-light leading-relaxed mb-3
                 bg-gradient-to-r from-purple-200 via-pink-200 to-amber-200
-                bg-clip-text text-transparent">
-                AI 神谕占卜 · 专属香氛灵魂
+                bg-clip-text text-transparent px-4">
+                解读你的星辰密码，寻找灵魂的香气
               </p>
-              <div className="h-px w-32 mx-auto bg-gradient-to-r from-transparent via-gold-400 to-transparent opacity-50" />
+              <div className="h-px w-40 mx-auto bg-gradient-to-r from-transparent via-amber-400 to-transparent opacity-50" />
+            </div>
+
+            {/* 价值主张 */}
+            <div className="mt-8 max-w-2xl mx-auto px-6">
+              <p className="text-sm md:text-base text-purple-200/80 leading-relaxed font-light italic">
+                每个人都是宇宙中独一无二的存在。<br className="hidden md:block" />
+                通过古老的东方智慧与现代 AI 的结合，<br className="hidden md:block" />
+                我们为你揭示命运的轨迹，并找到那一缕专属于你的香气。
+              </p>
             </div>
 
             {/* 装饰性图标 */}
-            <div className="flex items-center justify-center gap-6 mt-8">
-              <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">✨</span>
-              <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]"
-                style={{ animationDelay: '0.5s' }}>💎</span>
-              <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(167,139,250,0.5)]"
-                style={{ animationDelay: '1s' }}>🔮</span>
+            <div className="flex items-center justify-center gap-8 mt-10">
+              <div className="text-center">
+                <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(255,215,0,0.5)]">✨</span>
+                <p className="text-xs text-purple-300/60 mt-2 tracking-wider">星辰</p>
+              </div>
+              <div className="text-center">
+                <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(236,72,153,0.5)]"
+                  style={{ animationDelay: '0.5s' }}>💎</span>
+                <p className="text-xs text-purple-300/60 mt-2 tracking-wider">灵魂</p>
+              </div>
+              <div className="text-center">
+                <span className="text-3xl animate-float drop-shadow-[0_0_10px_rgba(167,139,250,0.5)]"
+                  style={{ animationDelay: '1s' }}>🔮</span>
+                <p className="text-xs text-purple-300/60 mt-2 tracking-wider">香气</p>
+              </div>
             </div>
 
             {/* 神秘感标语 */}
-            <p className="mt-6 text-sm tracking-[0.3em] uppercase
-              text-purple-300/70 font-light">
-              揭示命运之谜 · 寻找灵魂之香
+            <p className="mt-8 text-xs tracking-[0.4em] uppercase
+              text-purple-300/50 font-light">
+              Where Ancient Wisdom Meets Modern Soul
             </p>
           </div>
         </header>
@@ -121,7 +139,7 @@ export default function Home() {
                 </div>
 
                 <h3 className="text-2xl md:text-3xl font-display text-gradient-purple font-bold mb-6">
-                  AI 神谕正在解读命运密码
+                  星辰正在为你排列密码
                 </h3>
 
                 <div className="space-y-4 text-purple-200 text-sm">
@@ -158,9 +176,12 @@ export default function Home() {
               <div className="glass-panel p-10 rounded-3xl border-red-400/20">
                 <div className="text-7xl mb-6 opacity-70">😔</div>
                 <h3 className="text-2xl md:text-3xl font-display text-gradient-purple font-bold mb-4">
-                  神谕暂时无法连接
+                  星辰暂时隐匿了踪迹
                 </h3>
-                <p className="text-purple-200 mb-8 leading-relaxed">{error}</p>
+                <p className="text-purple-200 mb-8 leading-relaxed">
+                  宇宙的能量波动偶尔会干扰信号<br />
+                  请稍后再试,你的香气密码依然在等待被解读
+                </p>
                 <button
                   onClick={handleReset}
                   className="px-8 py-4 bg-gradient-to-r from-purple-500 via-pink-500 to-amber-500
@@ -171,7 +192,7 @@ export default function Home() {
                     border border-white/20
                     mystical-glow"
                 >
-                  重新咨询神谕
+                  重新开始探索
                 </button>
               </div>
             </div>

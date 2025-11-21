@@ -17,7 +17,8 @@
       "Bash(curl:*)",
       "WebFetch(domain:ai.google.dev)",
       "Bash(node:*)",
-      "Bash(vercel login)"
+      "Bash(vercel login)",
+      "WebSearch"
     ],
     "deny": [],
     "ask": []

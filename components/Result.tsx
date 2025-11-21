@@ -17,10 +17,10 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
           <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-purple-500 via-pink-500 to-amber-400 opacity-20" />
           <h2 className="relative text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold animate-text-shine
             drop-shadow-[0_0_20px_rgba(255,215,0,0.3)] mb-3">
-            命运密码已解
+            你的香气密码
           </h2>
           <div className="h-1 w-32 bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-full mx-auto mb-2" />
-          <p className="text-purple-200/70 text-sm tracking-widest uppercase">Your Destiny Revealed</p>
+          <p className="text-purple-200/70 text-sm tracking-widest uppercase">Your Soul Signature</p>
         </div>
       </div>
 
@@ -34,7 +34,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
               <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
                 border border-amber-400/30 mb-6">
                 <span className="text-xs font-bold tracking-[0.3em] text-gradient-gold uppercase">
-                  灵魂本质
+                  你的灵魂本质
                 </span>
               </div>
 
@@ -92,7 +92,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
               <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-purple-500/20 to-pink-500/20
                 border border-amber-400/30">
                 <span className="text-xs font-bold tracking-[0.3em] text-gradient-gold uppercase">
-                  运势罗盘
+                  你的星辰指引
                 </span>
               </div>
             </div>
@@ -244,7 +244,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
                   <div className="inline-flex items-center gap-2 mb-4">
                     <span className="text-amber-400 text-2xl">🏷️</span>
                     <span className="text-xs uppercase text-amber-300 font-bold tracking-[0.3em]">
-                      真实推荐
+                      为你精选
                     </span>
                   </div>
                   <div className="text-2xl md:text-3xl text-gradient-purple font-display font-bold leading-snug">
@@ -325,7 +325,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
                 <div className="pt-4 border-t border-purple-400/20">
                   <div className="flex items-center gap-2 text-amber-300/90">
                     <span className="text-lg">💫</span>
-                    <span className="text-xs uppercase tracking-wider font-semibold">使用建议：</span>
+                    <span className="text-xs uppercase tracking-wider font-semibold">灵感时刻：</span>
                   </div>
                   <p className="text-purple-200 mt-2 text-sm font-light leading-relaxed">
                     {data.usageAdvice}
@@ -353,7 +353,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
             translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
           <span className="relative z-10 flex items-center gap-3">
             <span>🔮</span>
-            <span>重新为他人占卜</span>
+            <span>探索更多灵魂密码</span>
             <span>✨</span>
           </span>
         </button>
