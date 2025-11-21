@@ -101,7 +101,7 @@ ${fortuneSchemaDescription}
           content: prompt
         }
       ],
-      temperature: 0.7,
+      temperature: 0.2,
       response_format: { type: "json_object" }
     });
 
