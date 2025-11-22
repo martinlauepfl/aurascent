@@ -1,0 +1,341 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 高级字体导入 */
+@import url('https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@200;300;400;600;700&family=Marcellus&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Crimson Pro', 'Georgia', serif;
+  background: linear-gradient(135deg, #1a0a0f 0%, #2d1618 50%, #1f0d12 100%);
+  color: #f9f1f0;
+  min-height: 100vh;
+  position: relative;
+  overflow-x: hidden;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Marcellus', 'Cinzel', serif;
+  font-weight: 400;
+  letter-spacing: 1.5px;
+}
+
+/* 奢华毛玻璃态设计 3.0 - 玫瑰金版 */
+.glass-panel {
+  background: linear-gradient(
+    135deg,
+    rgba(160, 21, 62, 0.12) 0%,
+    rgba(212, 165, 165, 0.08) 50%,
+    rgba(183, 110, 121, 0.10) 100%
+  );
+  backdrop-filter: blur(24px) saturate(180%);
+  -webkit-backdrop-filter: blur(24px) saturate(180%);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-top-color: rgba(255, 255, 255, 0.25);
+  border-left-color: rgba(255, 255, 255, 0.25);
+  box-shadow:
+    0 8px 32px 0 rgba(160, 21, 62, 0.18),
+    0 2px 8px 0 rgba(212, 165, 165, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.glass-panel::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.05),
+    transparent
+  );
+  transition: left 0.5s;
+}
+
+.glass-panel:hover::before {
+  left: 100%;
+}
+
+/* 输入框样式优化 */
+input[type="text"],
+input[type="date"],
+input[type="time"] {
+  color: #2d1618 !important;
+  font-weight: 400;
+}
+
+input[type="date"]::-webkit-date-and-time-value-text,
+input[type="time"]::-webkit-time-display-value {
+  color: #2d1618 !important;
+}
+
+input::placeholder {
+  color: rgba(45, 22, 24, 0.5) !important;
+  font-style: italic;
+  font-weight: 300;
+}
+
+/* === 高级动画系统 === */
+
+/* 粒子闪烁动画 */
+@keyframes sparkle {
+  0%, 100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+.animate-sparkle {
+  animation: sparkle 3s infinite ease-in-out;
+}
+
+/* 浮动动画 - 更流畅 */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  33% {
+    transform: translateY(-15px) rotate(2deg);
+  }
+  66% {
+    transform: translateY(-5px) rotate(-2deg);
+  }
+}
+.animate-float {
+  animation: float 8s ease-in-out infinite;
+}
+
+/* 渐变流动动画 */
+@keyframes gradientFlow {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientFlow 15s ease infinite;
+}
+
+/* 光晕脉冲 - 玫瑰金版 */
+@keyframes glowPulse {
+  0%, 100% {
+    box-shadow:
+      0 0 20px rgba(160, 21, 62, 0.4),
+      0 0 40px rgba(212, 165, 165, 0.25),
+      0 0 60px rgba(183, 110, 121, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 0 30px rgba(160, 21, 62, 0.6),
+      0 0 60px rgba(212, 165, 165, 0.35),
+      0 0 90px rgba(183, 110, 121, 0.25);
+  }
+}
+.animate-glow-pulse {
+  animation: glowPulse 3s ease-in-out infinite;
+}
+
+/* 优雅淡入上浮 */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+.animate-fade-in {
+  animation: fadeInUp 1s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* 旋转光晕 */
+@keyframes rotateGlow {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.animate-rotate-glow {
+  animation: rotateGlow 20s linear infinite;
+}
+
+/* 波纹扩散 */
+@keyframes ripple {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+.animate-ripple {
+  animation: ripple 2s ease-out infinite;
+}
+
+/* 文字渐变闪烁 */
+@keyframes textShine {
+  0%, 100% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.animate-text-shine {
+  background-size: 200% auto;
+  animation: textShine 5s linear infinite;
+}
+
+/* === 工具类 === */
+
+/* 金色文本渐变 - 香槟金版 */
+.text-gradient-gold {
+  background: linear-gradient(
+    135deg,
+    #D4AF37 0%,
+    #F4C430 25%,
+    #FFE5B4 50%,
+    #F4C430 75%,
+    #D4AF37 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 玫瑰金渐变文本 */
+.text-gradient-purple {
+  background: linear-gradient(
+    135deg,
+    #A0153E 0%,
+    #D4A5A5 50%,
+    #E8B4B8 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* 神秘光效 - 玫瑰金版 */
+.mystical-glow {
+  box-shadow:
+    0 0 20px rgba(160, 21, 62, 0.35),
+    0 0 40px rgba(212, 165, 165, 0.25),
+    0 0 60px rgba(183, 110, 121, 0.15);
+}
+
+/* 悬停提升效果 - 玫瑰金版 */
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow:
+    0 20px 60px rgba(160, 21, 62, 0.3),
+    0 10px 30px rgba(212, 165, 165, 0.2);
+}
+
+/* 平滑过渡 */
+.smooth-transition {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* 金色边框 */
+.border-gold {
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  border-top-color: rgba(212, 175, 55, 0.5);
+  border-left-color: rgba(212, 175, 55, 0.5);
+}
+
+/* 滚动条美化 - 玫瑰金版 */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(45, 22, 24, 0.2);
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #A0153E, #D4A5A5);
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #C41E3A, #E8B4B8);
+}
+
+/* 选中文本样式 - 玫瑰金版 */
+::selection {
+  background: rgba(212, 165, 165, 0.35);
+  color: #FFE5B4;
+}
+
+/* === 动态揭示动画 === */
+
+/* 缩放淡入 - 用于卡片揭示 */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9) translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+/* 交错动画延迟类 */
+.animate-scale-in {
+  animation: scaleIn 0.6s cubic-bezier(0.34, 1.56, 0.64, 1) forwards;
+  opacity: 0;
+}
+
+.delay-100 { animation-delay: 0.1s; }
+.delay-200 { animation-delay: 0.2s; }
+.delay-300 { animation-delay: 0.3s; }
+.delay-400 { animation-delay: 0.4s; }
+.delay-500 { animation-delay: 0.5s; }
+.delay-600 { animation-delay: 0.6s; }
+.delay-700 { animation-delay: 0.7s; }
+.delay-800 { animation-delay: 0.8s; }
+
+/* 闪烁庆祝效果 */
+@keyframes celebration {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  25% { transform: scale(1.1); opacity: 0.8; }
+  50% { transform: scale(0.95); opacity: 1; }
+  75% { transform: scale(1.05); opacity: 0.9; }
+}
+
+.animate-celebration {
+  animation: celebration 1s ease-in-out;
+}
