@@ -55,13 +55,9 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
               <div className="relative inline-block mb-3 sm:mb-4">
                 <div className="absolute inset-0 blur-lg sm:blur-xl bg-gradient-to-r from-[#C41E3A] to-[#D4A5A5] opacity-30 sm:opacity-40 rounded-full" />
                 <h3 className="relative text-3xl sm:text-4xl md:text-5xl text-gradient-purple font-display drop-shadow-lg">
-                  {data.element}
+                  {data.archetype}
                 </h3>
               </div>
-
-              <p className="text-[#D4A5A5] text-lg font-light italic tracking-wide">
-                {data.archetype}
-              </p>
             </div>
 
             <div className="bg-gradient-to-br from-white/5 to-white/0 rounded-2xl p-6 mb-6 border border-white/10">
