@@ -46,17 +46,10 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
           <div className="glass-panel p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-gold mystical-glow hover-lift animate-scale-in delay-100">
             <div className="text-center mb-5 sm:mb-6">
               <div className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-[#A0153E]/20 to-[#D4A5A5]/20
-                border border-amber-400/30 mb-5 sm:mb-6">
+                border border-amber-400/30 mb-4 sm:mb-5">
                 <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-gradient-gold uppercase">
                   你的灵魂
                 </span>
-              </div>
-
-              <div className="relative inline-block mb-3 sm:mb-4">
-                <div className="absolute inset-0 blur-lg sm:blur-xl bg-gradient-to-r from-[#C41E3A] to-[#D4A5A5] opacity-30 sm:opacity-40 rounded-full" />
-                <h3 className="relative text-3xl sm:text-4xl md:text-5xl text-gradient-purple font-display drop-shadow-lg">
-                  {data.archetype}
-                </h3>
               </div>
             </div>
 
