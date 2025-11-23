@@ -140,13 +140,35 @@ input[type="time"]::-webkit-datetime-edit-ampm-field {
 }
 
 /* 隐藏日期和时间输入框的浏览器默认 placeholder */
-input[type="date"]:invalid::-webkit-datetime-edit,
-input[type="time"]:invalid::-webkit-datetime-edit {
+input[type="date"]::-webkit-datetime-edit-text,
+input[type="date"]::-webkit-datetime-edit-month-field,
+input[type="date"]::-webkit-datetime-edit-day-field,
+input[type="date"]::-webkit-datetime-edit-year-field,
+input[type="time"]::-webkit-datetime-edit-text,
+input[type="time"]::-webkit-datetime-edit-hour-field,
+input[type="time"]::-webkit-datetime-edit-minute-field {
   color: transparent;
 }
 
-input[type="date"]:focus:invalid::-webkit-datetime-edit,
-input[type="time"]:focus:invalid::-webkit-datetime-edit {
+/* 当输入框有值时显示内容 */
+input[type="date"]:focus::-webkit-datetime-edit-text,
+input[type="date"]:focus::-webkit-datetime-edit-month-field,
+input[type="date"]:focus::-webkit-datetime-edit-day-field,
+input[type="date"]:focus::-webkit-datetime-edit-year-field,
+input[type="time"]:focus::-webkit-datetime-edit-text,
+input[type="time"]:focus::-webkit-datetime-edit-hour-field,
+input[type="time"]:focus::-webkit-datetime-edit-minute-field {
+  color: #2d1618 !important;
+}
+
+/* 当输入框有值后保持显示 */
+input[type="date"]:valid::-webkit-datetime-edit-text,
+input[type="date"]:valid::-webkit-datetime-edit-month-field,
+input[type="date"]:valid::-webkit-datetime-edit-day-field,
+input[type="date"]:valid::-webkit-datetime-edit-year-field,
+input[type="time"]:not(:placeholder-shown)::-webkit-datetime-edit-text,
+input[type="time"]:not(:placeholder-shown)::-webkit-datetime-edit-hour-field,
+input[type="time"]:not(:placeholder-shown)::-webkit-datetime-edit-minute-field {
   color: #2d1618 !important;
 }
 
