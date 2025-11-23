@@ -48,7 +48,7 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
               <div className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-[#A0153E]/20 to-[#D4A5A5]/20
                 border border-amber-400/30 mb-5 sm:mb-6">
                 <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-gradient-gold uppercase">
-                  你的灵魂本质
+                  你的灵魂
                 </span>
               </div>
 
