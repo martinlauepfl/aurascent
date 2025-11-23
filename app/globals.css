@@ -100,7 +100,7 @@ input[type="time"] {
 /* 日期和时间输入框的特殊处理 */
 input[type="date"]::-webkit-date-and-time-value,
 input[type="time"]::-webkit-time-display-value {
-  text-align: left;
+  text-align: left !important;
   padding-left: 0;
 }
 
@@ -109,7 +109,18 @@ input[type="time"]::-webkit-time-display-value {
   color: #2d1618 !important;
   font-weight: 400;
   line-height: 1.5;
-  text-align: left;
+  text-align: left !important;
+}
+
+/* 强制时间输入框内部元素左对齐 */
+input[type="time"]::-webkit-datetime-edit {
+  text-align: left !important;
+  padding-left: 0 !important;
+}
+
+input[type="time"]::-webkit-datetime-edit-fields-wrapper {
+  text-align: left !important;
+  padding-left: 0 !important;
 }
 
 /* 日历图标位置调整 */
