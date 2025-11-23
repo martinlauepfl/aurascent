@@ -119,24 +119,35 @@ input[type="time"]::-webkit-time-display-value {
 /* 强制时间输入框内部元素左对齐 */
 input[type="time"] {
   text-align: left !important;
+  direction: ltr !important;
+  text-align-last: left !important;
 }
 
 input[type="time"]::-webkit-datetime-edit {
   text-align: left !important;
   padding-left: 0 !important;
-  display: block !important;
+  padding-right: 0 !important;
+  display: inline-flex !important;
+  justify-content: flex-start !important;
+  align-items: center !important;
+  width: auto !important;
 }
 
 input[type="time"]::-webkit-datetime-edit-fields-wrapper {
   text-align: left !important;
   padding-left: 0 !important;
-  display: block !important;
+  padding-right: 0 !important;
+  display: inline-flex !important;
+  justify-content: flex-start !important;
+  margin-left: 0 !important;
+  margin-right: auto !important;
 }
 
 input[type="time"]::-webkit-datetime-edit-hour-field,
 input[type="time"]::-webkit-datetime-edit-minute-field,
 input[type="time"]::-webkit-datetime-edit-ampm-field {
   text-align: left !important;
+  padding-left: 0 !important;
 }
 
 /* 隐藏日期和时间输入框的浏览器默认 placeholder */
