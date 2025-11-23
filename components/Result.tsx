@@ -26,35 +26,35 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
   return (
     <div ref={resultRef} className="w-full max-w-7xl mx-auto animate-fade-in px-4">
       {/* 顶部标题 */}
-      <div className="mb-12 text-center">
+      <div className="mb-8 sm:mb-10 md:mb-12 text-center">
         <div className="inline-block relative">
-          <div className="absolute inset-0 blur-2xl bg-gradient-to-r from-[#A0153E] via-[#D4A5A5] to-amber-400 opacity-20" />
-          <h2 className="relative text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold animate-text-shine animate-celebration
-            drop-shadow-[0_0_20px_rgba(255,215,0,0.3)] mb-3">
+          <div className="absolute inset-0 blur-xl sm:blur-2xl bg-gradient-to-r from-[#A0153E] via-[#D4A5A5] to-amber-400 opacity-15 sm:opacity-20" />
+          <h2 className="relative text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-display text-gradient-gold animate-text-shine animate-celebration
+            drop-shadow-[0_0_15px_rgba(255,215,0,0.3)] sm:drop-shadow-[0_0_20px_rgba(255,215,0,0.3)] mb-2 sm:mb-3 px-2">
             你的香气密码
           </h2>
-          <div className="h-1 w-32 bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-full mx-auto mb-2" />
-          <p className="text-[#E8B4B8]/70 text-sm tracking-widest uppercase">Your Soul Signature</p>
+          <div className="h-0.5 sm:h-1 w-24 sm:w-32 bg-gradient-to-r from-transparent via-amber-400 to-transparent rounded-full mx-auto mb-1.5 sm:mb-2" />
+          <p className="text-[#E8B4B8]/70 text-xs sm:text-sm tracking-wider sm:tracking-widest uppercase px-2">Your Soul Signature</p>
         </div>
       </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8">
 
         {/* 左侧栏 - 个人分析 */}
-        <div className="lg:col-span-5 space-y-6">
+        <div className="lg:col-span-5 space-y-5 sm:space-y-6">
           {/* 灵魂本质卡片 */}
-          <div className="glass-panel p-8 rounded-3xl border-gold mystical-glow hover-lift animate-scale-in delay-100">
-            <div className="text-center mb-6">
-              <div className="inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#A0153E]/20 to-[#D4A5A5]/20
-                border border-amber-400/30 mb-6">
-                <span className="text-xs font-bold tracking-[0.3em] text-gradient-gold uppercase">
+          <div className="glass-panel p-6 sm:p-8 rounded-2xl sm:rounded-3xl border-gold mystical-glow hover-lift animate-scale-in delay-100">
+            <div className="text-center mb-5 sm:mb-6">
+              <div className="inline-block px-4 sm:px-5 py-1.5 sm:py-2 rounded-full bg-gradient-to-r from-[#A0153E]/20 to-[#D4A5A5]/20
+                border border-amber-400/30 mb-5 sm:mb-6">
+                <span className="text-[10px] sm:text-xs font-bold tracking-[0.25em] sm:tracking-[0.3em] text-gradient-gold uppercase">
                   你的灵魂本质
                 </span>
               </div>
 
-              <div className="relative inline-block mb-4">
-                <div className="absolute inset-0 blur-xl bg-gradient-to-r from-[#C41E3A] to-[#D4A5A5] opacity-40 rounded-full" />
-                <h3 className="relative text-4xl md:text-5xl text-gradient-purple font-display drop-shadow-lg">
+              <div className="relative inline-block mb-3 sm:mb-4">
+                <div className="absolute inset-0 blur-lg sm:blur-xl bg-gradient-to-r from-[#C41E3A] to-[#D4A5A5] opacity-30 sm:opacity-40 rounded-full" />
+                <h3 className="relative text-3xl sm:text-4xl md:text-5xl text-gradient-purple font-display drop-shadow-lg">
                   {data.element}
                 </h3>
               </div>
@@ -352,28 +352,28 @@ export const Result: React.FC<ResultProps> = ({ data, onReset }) => {
       </div>
 
       {/* 底部操作按钮 */}
-      <div className="mt-12 text-center animate-scale-in delay-500">
+      <div className="mt-10 sm:mt-12 text-center animate-scale-in delay-500">
         <button
           onClick={onReset}
-          className="px-10 py-5 bg-gradient-to-r from-[#C41E3A] via-[#E8B4B8] to-amber-500
+          className="px-8 sm:px-10 py-4 sm:py-5 bg-gradient-to-r from-[#C41E3A] via-[#E8B4B8] to-amber-500
             hover:from-[#A0153E] hover:via-[#D4A5A5] hover:to-amber-600
-            text-white font-semibold text-lg rounded-full
+            text-white font-semibold text-base sm:text-lg rounded-full min-h-[56px] sm:min-h-[64px]
             shadow-xl hover:shadow-2xl
-            smooth-transition transform hover:scale-105
+            smooth-transition transform hover:scale-105 active:scale-95
             border-2 border-white/20
             mystical-glow relative overflow-hidden group"
         >
           <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/10 to-transparent
             translate-x-[-100%] group-hover:translate-x-[100%] transition-transform duration-1000" />
-          <span className="relative z-10 flex items-center gap-3">
-            <span>🔮</span>
+          <span className="relative z-10 flex items-center justify-center gap-2 sm:gap-3">
+            <span className="text-lg sm:text-xl">🔮</span>
             <span>探索更多灵魂密码</span>
-            <span>✨</span>
+            <span className="text-lg sm:text-xl">✨</span>
           </span>
         </button>
 
         {/* 品牌标识 */}
-        <div className="mt-10 pb-4 animate-scale-in delay-600">
+        <div className="mt-8 sm:mt-10 pb-4 animate-scale-in delay-600">
           <div className="inline-flex flex-col items-center gap-2 px-6 py-4 rounded-2xl
             bg-gradient-to-r from-[#A0153E]/5 to-[#D4A5A5]/5 border border-[#C41E3A]/10">
             <div className="text-gradient-gold font-display text-xl tracking-wider">

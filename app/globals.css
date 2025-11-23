@@ -339,3 +339,164 @@ input::placeholder {
 .animate-celebration {
   animation: celebration 1s ease-in-out;
 }
+
+/* === 移动端响应式优化 === */
+
+/* 移动端触摸优化 */
+@media (max-width: 768px) {
+  /* 优化触摸目标大小 */
+  button, a, input, select {
+    min-height: 44px;
+  }
+
+  /* 移动端字体大小优化 */
+  body {
+    font-size: 16px; /* 防止iOS自动缩放 */
+    -webkit-text-size-adjust: 100%;
+  }
+
+  /* 优化移动端毛玻璃效果性能 */
+  .glass-panel {
+    backdrop-filter: blur(16px) saturate(150%);
+    -webkit-backdrop-filter: blur(16px) saturate(150%);
+  }
+
+  /* 移动端减少阴影层数以提升性能 */
+  .mystical-glow {
+    box-shadow:
+      0 0 15px rgba(160, 21, 62, 0.3),
+      0 0 30px rgba(212, 165, 165, 0.2);
+  }
+
+  /* 移动端悬停效果调整为点击效果 */
+  .hover-lift:active {
+    transform: translateY(-4px) scale(1.01);
+    box-shadow:
+      0 10px 40px rgba(160, 21, 62, 0.25),
+      0 5px 20px rgba(212, 165, 165, 0.15);
+  }
+
+  /* 移动端标题优化 */
+  h1 {
+    font-size: 2.5rem;
+    line-height: 1.2;
+  }
+
+  h2 {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+  }
+
+  /* 移动端内边距优化 */
+  .glass-panel {
+    padding: 1.5rem !important;
+  }
+
+  /* 移动端文字间距优化 */
+  .font-display {
+    letter-spacing: 0.5px;
+  }
+}
+
+/* 小屏幕设备优化 */
+@media (max-width: 480px) {
+  /* 进一步优化小屏幕字体 */
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  /* 小屏幕内边距 */
+  .glass-panel {
+    padding: 1.25rem !important;
+  }
+
+  /* 减少动画复杂度 */
+  .animate-float {
+    animation: float 12s ease-in-out infinite;
+  }
+
+  .animate-rotate-glow {
+    animation: rotateGlow 30s linear infinite;
+  }
+}
+
+/* 平板设备优化 */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .glass-panel {
+    padding: 2rem !important;
+  }
+}
+
+/* 触摸设备优化 */
+@media (hover: none) and (pointer: coarse) {
+  /* 移除悬停效果，使用点击效果 */
+  .hover-lift:hover {
+    transform: none;
+  }
+
+  .hover-lift:active {
+    transform: scale(0.98);
+  }
+
+  /* 优化按钮点击反馈 */
+  button:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* 横屏模式优化 */
+@media (max-height: 600px) and (orientation: landscape) {
+  /* 减小垂直间距 */
+  .space-y-7 > * + * {
+    margin-top: 1rem !important;
+  }
+
+  header {
+    padding-top: 1.5rem !important;
+    padding-bottom: 1.5rem !important;
+  }
+}
+
+/* 高分辨率屏幕优化 */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  /* 优化边框和阴影渲染 */
+  .glass-panel {
+    border-width: 0.5px;
+  }
+}
+
+/* 深色模式支持（如果需要） */
+@media (prefers-color-scheme: dark) {
+  body {
+    /* 已经是深色主题，保持不变 */
+  }
+}
+
+/* 减少动画偏好设置 */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .hover-lift {
+    transition: none;
+  }
+}
