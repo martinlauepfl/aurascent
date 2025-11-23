@@ -88,14 +88,16 @@ input[type="time"] {
 input[type="text"],
 input[type="date"],
 input[type="time"] {
-  min-height: 48px; /* 确保移动端最小触摸目标 */
+  height: 56px !important; /* 固定高度确保一致性 */
+  min-height: 56px;
 }
 
-@media (min-width: 640px) {
+@media (max-width: 639px) {
   input[type="text"],
   input[type="date"],
   input[type="time"] {
-    min-height: 56px;
+    height: 52px !important; /* 移动端固定高度 */
+    min-height: 52px;
   }
 }
 
