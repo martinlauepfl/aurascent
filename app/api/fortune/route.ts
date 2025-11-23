@@ -56,8 +56,6 @@ export async function POST(request: NextRequest) {
     const model = "qwen3-max";
 
     const prompt = `
-请扮演一位精通西方占星学和中国八字命理的神秘大师，同时是一位专业的调香师。
-
 分析以下用户信息：
 姓名：${profile.name}
 出生日期：${profile.birthDate}
