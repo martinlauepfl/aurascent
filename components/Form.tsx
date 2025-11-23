@@ -51,9 +51,7 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
               text-gray-800 font-light not-italic text-sm sm:text-base
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-[#D4A5A5]/50 placeholder:not-italic placeholder:text-sm sm:placeholder:text-base
               shadow-inner hover:border-[#D4A5A5]/60"
-            placeholder="你想被如何称呼(选填)"
           />
         </div>
 
