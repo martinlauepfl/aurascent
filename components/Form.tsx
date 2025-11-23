@@ -72,12 +72,10 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
               text-gray-800 font-light not-italic
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-[#D4A5A5]/50
               shadow-inner hover:border-[#D4A5A5]/60
               [&::-webkit-calendar-picker-indicator]:cursor-pointer
               [&::-webkit-calendar-picker-indicator]:opacity-60
               [&::-webkit-calendar-picker-indicator]:hover:opacity-100"
-            placeholder="你降临于世的那一天"
           />
         </div>
 
@@ -96,12 +94,10 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
               text-gray-800 font-light not-italic
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-[#D4A5A5]/50
               shadow-inner hover:border-[#D4A5A5]/60
               [&::-webkit-calendar-picker-indicator]:cursor-pointer
               [&::-webkit-calendar-picker-indicator]:opacity-60
               [&::-webkit-calendar-picker-indicator]:hover:opacity-100"
-            placeholder="更精确的解读(选填)"
           />
         </div>
 
