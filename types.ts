@@ -1,6 +1,6 @@
 export enum Gender {
-  Male = '男性',
-  Female = '女性'
+  Female = '女性',
+  Male = '男性'
 }
 
 export interface UserProfile {
