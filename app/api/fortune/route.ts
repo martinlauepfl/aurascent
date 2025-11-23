@@ -55,7 +55,14 @@ export async function POST(request: NextRequest) {
 
     const model = "qwen3-max";
 
+    // 获取当前年份
+    const currentYear = new Date().getFullYear();
+    const currentDate = new Date().toISOString().split('T')[0];
+
     const prompt = `
+当前日期：${currentDate}
+当前年份：${currentYear}年
+
 分析以下用户信息：
 姓名：${profile.name}
 出生日期：${profile.birthDate}
@@ -71,6 +78,7 @@ export async function POST(request: NextRequest) {
 
 运势分析要求：
 - 基于用户的星座、生肖、八字等传统命理方法
+- 运势分析必须基于当前年份（${currentYear}年），不要提及过去的年份
 - 提供具体实用的建议和指导
 - 语调积极正面，即使是劣势也要给出改善建议
 
