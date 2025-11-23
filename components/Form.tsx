@@ -48,10 +48,10 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full bg-white/90 border-2 border-[#E8B4B8]/40 rounded-lg sm:rounded-xl px-4 sm:px-5 py-3 sm:py-4
-              text-gray-800 font-light not-italic text-sm sm:text-base
+              text-gray-800 font-light not-italic text-sm sm:text-base text-center
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-[#D4A5A5]/50 placeholder:not-italic placeholder:text-sm sm:placeholder:text-base
+              placeholder:text-[#D4A5A5]/50 placeholder:not-italic placeholder:text-sm sm:placeholder:text-base placeholder:text-center
               shadow-inner hover:border-[#D4A5A5]/60"
             placeholder="你想被如何称呼(选填)"
           />
