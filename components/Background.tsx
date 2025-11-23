@@ -80,11 +80,6 @@ export const Background: React.FC = () => {
           animate-sparkle" style={{ animationDelay: '2.2s' }} />
       </div>
 
-      {/* 微妙纹理叠加 */}
-      <div className="absolute inset-0 opacity-[0.03]
-        bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmZmZmYiIGZpbGwtb3BhY2l0eT0iMSI+PHBhdGggZD0iTTM2IDE0YzQgMCA4IDQgOCA4cy00IDgtOCA4LTgtNC04LTggNC04IDgtOHptMCAwYzQgMCA4LTQgOC04cy00LTgtOC04LTggNC04IDggNC04IDggOHoiLz48L2c+PC9nPjwvc3ZnPg==')]"
-      />
-
       {/* 顶部渐变遮罩 */}
       <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-[#1a0a0f]/80 to-transparent pointer-events-none" />
 
