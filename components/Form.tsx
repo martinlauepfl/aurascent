@@ -48,10 +48,10 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             value={name}
             onChange={(e) => setName(e.target.value)}
             className="w-full bg-white/90 border-2 border-[#E8B4B8]/40 rounded-xl px-5 py-4
-              text-gray-800 font-light
+              text-gray-800 font-light not-italic
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-[#D4A5A5]/50 placeholder:italic
+              placeholder:text-[#D4A5A5]/50 placeholder:not-italic
               shadow-inner hover:border-[#D4A5A5]/60"
             placeholder="你想被如何称呼(选填)"
           />
@@ -71,10 +71,10 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             value={birthDate}
             onChange={(e) => setBirthDate(e.target.value)}
             className="w-full bg-white/90 border-2 border-[#E8B4B8]/40 rounded-xl px-5 py-4
-              text-gray-800 font-light
+              text-gray-800 font-light not-italic
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-[#D4A5A5]/50
+              placeholder:text-[#D4A5A5]/50 placeholder:not-italic
               shadow-inner hover:border-[#D4A5A5]/60
               [&::-webkit-calendar-picker-indicator]:cursor-pointer
               [&::-webkit-calendar-picker-indicator]:opacity-60
@@ -95,10 +95,10 @@ export const Form: React.FC<FormProps> = ({ onSubmit, isLoading }) => {
             value={birthTime}
             onChange={(e) => setBirthTime(e.target.value)}
             className="w-full bg-white/90 border-2 border-[#E8B4B8]/40 rounded-xl px-5 py-4
-              text-gray-800 font-light
+              text-gray-800 font-light not-italic
               focus:ring-2 focus:ring-amber-400/50 focus:border-amber-400/50 focus:bg-white
               outline-none smooth-transition [color-scheme:light]
-              placeholder:text-[#D4A5A5]/50
+              placeholder:text-[#D4A5A5]/50 placeholder:not-italic
               shadow-inner hover:border-[#D4A5A5]/60
               [&::-webkit-calendar-picker-indicator]:cursor-pointer
               [&::-webkit-calendar-picker-indicator]:opacity-60
