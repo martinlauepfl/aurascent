@@ -1,0 +1,10 @@
+# robots.txt for AuraScent
+User-agent: *
+Allow: /
+Disallow: /api/
+
+# Sitemap
+Sitemap: https://aurascent.top/sitemap.xml
+
+# Crawl-delay
+Crawl-delay: 1
